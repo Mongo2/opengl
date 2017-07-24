@@ -15,7 +15,7 @@
 #   For the latest updates, visit Delphi3D: http://www.delphi3d.net
 #******************************************************************************
 
-import opengl
+import ../opengl
 
 {.deadCodeElim: on.}
 
@@ -249,6 +249,8 @@ proc glutInitWindowSize*(width, height: int)
 proc glutMainLoop*()
   # GLUT window sub-API.
 proc glutCreateWindow*(title: cstring): int
+proc glutGetWindow*(): int
+proc glutMainLoopEvent*()
 proc glutCreateSubWindow*(win, x, y, width, height: int): int
 proc glutDestroyWindow*(win: int)
 proc glutPostRedisplay*()
